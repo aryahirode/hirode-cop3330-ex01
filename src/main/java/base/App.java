@@ -31,16 +31,16 @@ public class App {
         myApp.output(output);
     }
 
-    public String readName() {
+    private String readName() {
         System.out.print("What is your name? ");
         return in.nextLine();
     }
 
-    public String concatString(String name) {
+    private String concatString(String name) {
         return "Hello, " + name + ", nice to meet you!";
     }
 
-    public void output(String outputString) {
+    private void output(String outputString) {
         System.out.println(outputString);
     }
 
