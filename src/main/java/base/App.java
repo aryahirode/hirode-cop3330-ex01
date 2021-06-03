@@ -1,5 +1,9 @@
-package base;
+/*
+ *  UCF COP3330 Summer 2021 Assignment 1 Solution
+ *  Copyright 2021 Arya Hirode
+ */
 
+package base;
 import java.util.Scanner;
 
 /*
@@ -17,12 +21,27 @@ Challenges
     Write a version of the program that displays the greeting in a GUI window.
  */
 public class App {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        System.out.print("What is your name? ");
-        String name = in.nextLine();
+   static Scanner in = new Scanner(System.in);
 
-        String out = "Hello, " + name + ", nice to meet you!";
-        System.out.println(out);
+   public static void main(String[] args) {
+       App myApp = new App();
+
+       String name = myApp.readName();
+        String output = myApp.concatString(name);
+        myApp.output(output);
     }
+
+    public String readName() {
+        System.out.print("What is your name? ");
+        return in.nextLine();
+    }
+
+    public String concatString(String name) {
+        return "Hello, " + name + ", nice to meet you!";
+    }
+
+    public void output(String outputString) {
+        System.out.println(outputString);
+    }
+
 }
